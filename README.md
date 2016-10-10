@@ -19,4 +19,4 @@ If you only want to lint the code use: `npm run linter`.
 
 ## License
 exprsjo is provided under
-[MIT license](https://github.com/Deseteral/oudjo/blob/master/LICENSE).
+[MIT license](https://github.com/Deseteral/exprsjo/blob/master/LICENSE).
