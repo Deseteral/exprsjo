@@ -13,9 +13,12 @@ If you just want to run the app without building use `npm run app`. Similarly if
 you want to build the app without running it use `npm run build`.
 
 ## Testing
-Use `npm t` to run all of the tests.
+Use `npm t` to run all of the tests, `npm run buildTests` to only build both app
+and tests.
 
-If you only want to lint the code use: `npm run linter`.
+When want to...
+- run components tests use: `npm run componentsTests`
+- lint the code use: `npm run linter`
 
 ## License
 exprsjo is provided under
