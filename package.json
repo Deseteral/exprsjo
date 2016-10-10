@@ -4,10 +4,13 @@
   "description": "Photo organizer",
   "main": "app/main.js",
   "scripts": {
-    "start": "npm run build && npm run app",
-    "test": "npm run linter",
-    "app": "gulp run",
+    "start": "npm run buildAndRun",
+    "test": "npm run build && npm run buildTests && npm run componentsTests && npm run linter",
+    "app": "electron build",
     "build": "gulp build",
+    "buildAndRun": "npm run build && npm run app",
+    "buildTests": "gulp tests",
+    "componentsTests": "wct build/tests/components/**/*-spec.html",
     "linter": "eslint app/**/*.js"
   },
   "repository": {
@@ -26,7 +29,7 @@
     "eslint": "^3.7.1",
     "gulp": "^3.9.1",
     "gulp-babel": "^6.1.2",
-    "gulp-run": "^1.7.1",
-    "gulp-sourcemaps": "^1.6.0"
+    "gulp-sourcemaps": "^1.6.0",
+    "web-component-tester": "^4.3.4"
   }
 }

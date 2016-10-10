@@ -1,11 +1,6 @@
 const gulp = require('gulp');
-const run = require('gulp-run');
 const babel = require('gulp-babel');
 const sourcemaps = require('gulp-sourcemaps');
-
-gulp.task('run', () =>
-  run('electron build').exec()
-);
 
 gulp.task('build-misc', () => gulp
   .src('package.json')
@@ -37,8 +32,24 @@ gulp.task('build-js', () => gulp
   .pipe(gulp.dest('build/app'))
 );
 
+gulp.task('tests-js', () => gulp
+  .src('tests/**/*.js')
+  .pipe(sourcemaps.init())
+  .pipe(babel({
+    presets: ['es2015-node6']
+  }))
+  .pipe(sourcemaps.write(''))
+  .pipe(gulp.dest('build/tests'))
+);
+
+gulp.task('tests-html', () => gulp
+  .src('tests/**/*.html')
+  .pipe(gulp.dest('build/tests'))
+);
+
 const buildTasks = ['build-misc', 'build-bower', 'build-components',
   'build-html', 'build-js'];
 
 gulp.task('build', buildTasks);
+gulp.task('tests', ['build', 'tests-js', 'tests-html']);
 gulp.task('default', ['build']);
