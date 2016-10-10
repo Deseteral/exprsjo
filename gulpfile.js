@@ -12,6 +12,16 @@ gulp.task('build-misc', () => gulp
   .pipe(gulp.dest('build'))
 );
 
+gulp.task('build-bower', () => gulp
+  .src('bower_components/**/*')
+  .pipe(gulp.dest('build/bower_components'))
+);
+
+gulp.task('build-components', () => gulp
+  .src('app/components/**/*')
+  .pipe(gulp.dest('build/app/components'))
+);
+
 gulp.task('build-html', () => gulp
   .src('app/index.html')
   .pipe(gulp.dest('build/app'))
@@ -27,5 +37,8 @@ gulp.task('build-js', () => gulp
   .pipe(gulp.dest('build/app'))
 );
 
-gulp.task('build', ['build-misc', 'build-html', 'build-js']);
+const buildTasks = ['build-misc', 'build-bower', 'build-components',
+  'build-html', 'build-js'];
+
+gulp.task('build', buildTasks);
 gulp.task('default', ['run']);

@@ -1,0 +1,21 @@
+{
+  "name": "exprsjo",
+  "description": "Photo organizer",
+  "main": "app/main.js",
+  "authors": [
+    "Deseteral <github.com/deseteral>"
+  ],
+  "license": "MIT",
+  "homepage": "https://github.com/Deseteral/exprsjo",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "polymer": "Polymer/polymer#^1.7.0"
+  }
+}
