@@ -3,7 +3,7 @@ const run = require('gulp-run');
 const babel = require('gulp-babel');
 const sourcemaps = require('gulp-sourcemaps');
 
-gulp.task('run', ['build'], () =>
+gulp.task('run', () =>
   run('electron build').exec()
 );
 
@@ -41,4 +41,4 @@ const buildTasks = ['build-misc', 'build-bower', 'build-components',
   'build-html', 'build-js'];
 
 gulp.task('build', buildTasks);
-gulp.task('default', ['run']);
+gulp.task('default', ['build']);

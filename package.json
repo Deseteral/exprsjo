@@ -4,9 +4,11 @@
   "description": "Photo organizer",
   "main": "app/main.js",
   "scripts": {
-    "start": "gulp",
+    "start": "npm run build && npm run app",
+    "test": "npm run linter",
+    "app": "gulp run",
     "build": "gulp build",
-    "test": "eslint app/**/*.js"
+    "linter": "eslint app/**/*.js"
   },
   "repository": {
     "type": "git",
