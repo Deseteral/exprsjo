@@ -1,0 +1,20 @@
+{
+  "name": "exprsjo",
+  "version": "1.0.0",
+  "description": "Photo organizer",
+  "main": "app/main.js",
+  "scripts": {
+    "start": "node app/main.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/deseteral/exprsjo.git"
+  },
+  "author": "Deseteral <github.com/deseteral>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/deseteral/exprsjo/issues"
+  },
+  "homepage": "https://github.com/deseteral/exprsjo#readme"
+}
