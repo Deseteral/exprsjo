@@ -4,7 +4,8 @@
   "description": "Photo organizer",
   "main": "app/main.js",
   "scripts": {
-    "start": "electron .",
+    "start": "gulp",
+    "build": "gulp build",
     "test": "eslint app/**/*.js"
   },
   "repository": {
@@ -18,7 +19,12 @@
   },
   "homepage": "https://github.com/deseteral/exprsjo#readme",
   "devDependencies": {
+    "babel-preset-es2015-node6": "^0.3.0",
     "electron": "^1.4.3",
-    "eslint": "^3.7.1"
+    "eslint": "^3.7.1",
+    "gulp": "^3.9.1",
+    "gulp-babel": "^6.1.2",
+    "gulp-run": "^1.7.1",
+    "gulp-sourcemaps": "^1.6.0"
   }
 }
