@@ -18,7 +18,7 @@ gulp.task('build-bower', () => gulp
 );
 
 gulp.task('build-components', () => gulp
-  .src('app/components/**/*')
+  .src('app/components/**/*.html')
   .pipe(gulp.dest('build/app/components'))
 );
 
