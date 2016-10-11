@@ -18,7 +18,7 @@ gulp.task('build-components', () => gulp
 );
 
 gulp.task('build-html', () => gulp
-  .src('app/index.html')
+  .src(['app/index.html', 'app/splash-screen.html'])
   .pipe(gulp.dest('build/app'))
 );
 
