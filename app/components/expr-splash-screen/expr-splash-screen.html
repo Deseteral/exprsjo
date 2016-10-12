@@ -3,6 +3,7 @@
 
 <link rel="import" href="../../../bower_components/paper-styles/color.html">
 <link rel="import" href="../../../bower_components/paper-styles/typography.html">
+<link rel="import" href="../../../bower_components/paper-button/paper-button.html">
 <link rel="import" href="../../app-theme.html">
 
 <dom-module id="expr-splash-screen">
@@ -20,8 +21,16 @@
         font-weight: 200;
         line-height: 70px;
       }
+
+      .subtitle {
+        @apply(--paper-font-subhead);
+        margin-top: 12px;
+        margin-bottom: 12px;
+      }
     </style>
-    <div class="title">exprsjo splash screen</div>
+    <div class="title">exprsjo</div>
+    <div class="subtitle">Open your photo library</div>
+    <paper-button class="button-browse" raised>browse</paper-button>
   </template>
   <script src="expr-splash-screen.js"></script>
 </dom-module>

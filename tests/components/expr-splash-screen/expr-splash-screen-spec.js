@@ -1,5 +1,4 @@
-/* global chai */
-chai.should();
+/* global expect */
 
 describe('<expr-splash-screen>', () => {
   let exprApp;
@@ -15,6 +14,16 @@ describe('<expr-splash-screen>', () => {
 
   it('should render title', () => {
     const title = exprApp.querySelector('.title').textContent;
-    title.should.eql('exprsjo splash screen');
+    expect(title).to.eql('exprsjo');
+  });
+
+  it('should render subtitle', () => {
+    const subtitle = exprApp.querySelector('.subtitle').textContent;
+    expect(subtitle).to.eql('Open your photo library');
+  });
+
+  it('should render "browse" button', () => {
+    const button = exprApp.querySelector('.button-browse');
+    expect(button).to.be.ok;
   });
 });
