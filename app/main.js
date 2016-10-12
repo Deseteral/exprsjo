@@ -30,15 +30,22 @@ function createSplashWindow() {
     maxHeight: height,
     resizable: false,
     frame: false,
-    center: true
+    center: true,
+    show: false,
+    backgroundColor: '#212121'
   });
 
   splashWindow.setMenu(null);
   splashWindow.loadURL(`file://${__dirname}/splash-screen.html`);
   splashWindow.webContents.openDevTools();
 
+  splashWindow.once('ready-to-show', () => splashWindow.show());
+
   splashWindow.on('closed', () => {
     splashWindow = null;
+
+    // Closing splash screen is like closing entire app
+    app.quit();
   });
 }
 
@@ -57,6 +64,6 @@ function createMainWindow() {
     mainWindow = null;
 
     // Closing main window is like closing entire app
-    app.close();
+    app.quit();
   });
 }

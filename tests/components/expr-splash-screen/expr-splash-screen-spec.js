@@ -14,7 +14,7 @@ describe('<expr-splash-screen>', () => {
   });
 
   it('should render title', () => {
-    const title = exprApp.querySelector('h1').textContent;
+    const title = exprApp.querySelector('.title').textContent;
     title.should.eql('exprsjo splash screen');
   });
 });

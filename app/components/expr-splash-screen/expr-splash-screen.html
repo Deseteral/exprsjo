@@ -1,14 +1,27 @@
 <!doctype html>
 <link rel="import" href="../../../bower_components/polymer/polymer.html">
 
+<link rel="import" href="../../../bower_components/paper-styles/color.html">
+<link rel="import" href="../../../bower_components/paper-styles/typography.html">
+<link rel="import" href="../../app-theme.html">
+
 <dom-module id="expr-splash-screen">
   <template>
+    <style include="app-theme"></style>
     <style>
       :host {
         display: inline-block;
+        background: var(--background-color);
+        color: var(--primary-text-color);
+      }
+
+      .title {
+        @apply(--paper-font-display3);
+        font-weight: 200;
+        line-height: 70px;
       }
     </style>
-    <h1>exprsjo splash screen</h1>
+    <div class="title">exprsjo splash screen</div>
   </template>
   <script src="expr-splash-screen.js"></script>
 </dom-module>
