@@ -22,8 +22,17 @@ describe('<expr-splash-screen>', () => {
     expect(subtitle).to.eql('Open your photo library');
   });
 
-  it('should render "browse" button', () => {
-    const button = exprApp.querySelector('.button-browse');
+  it('should render library path input inside container', () => {
+    const input = libraryPathContainer().querySelector('.input-library-path');
+    expect(input).to.be.ok;
+  });
+
+  it('should render "browse" button inside container', () => {
+    const button = libraryPathContainer().querySelector('.button-browse');
     expect(button).to.be.ok;
   });
+
+  function libraryPathContainer() {
+    return exprApp.querySelector('.container-library-path');
+  }
 });

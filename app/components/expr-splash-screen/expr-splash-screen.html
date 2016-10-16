@@ -4,6 +4,7 @@
 <link rel="import" href="../../../bower_components/paper-styles/color.html">
 <link rel="import" href="../../../bower_components/paper-styles/typography.html">
 <link rel="import" href="../../../bower_components/paper-button/paper-button.html">
+<link rel="import" href="../../../bower_components/paper-input/paper-input.html">
 <link rel="import" href="../../app-theme.html">
 
 <dom-module id="expr-splash-screen">
@@ -27,10 +28,26 @@
         margin-top: 12px;
         margin-bottom: 12px;
       }
+
+      .container-library-path {
+        display: flex;
+      }
+
+      .input-library-path {
+        flex-grow: 1;
+        margin-right: 10px;
+      }
+
+      .button-browse {
+        align-self: flex-end;
+      }
     </style>
     <div class="title">exprsjo</div>
     <div class="subtitle">Open your photo library</div>
-    <paper-button class="button-browse" raised>browse</paper-button>
+    <div class="container-library-path">
+      <paper-input class="input-library-path" label="Library path"></paper-input>
+      <paper-button class="button-browse" raised>browse</paper-button>
+    </div>
   </template>
   <script src="expr-splash-screen.js"></script>
 </dom-module>
