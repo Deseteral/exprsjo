@@ -46,6 +46,14 @@ describe('<expr-splash-screen>', () => {
     expect(list).to.be.ok;
   });
 
+  it('should render operation buttons', () => {
+    const exitButton = exprApp.querySelector('.button-exit').textContent;
+    const openButton = exprApp.querySelector('.button-open').textContent;
+
+    expect(exitButton).to.eql('exit');
+    expect(openButton).to.eql('open');
+  });
+
   function libraryPathContainer() {
     return exprApp.querySelector('.container-library-path');
   }
