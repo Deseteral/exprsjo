@@ -5,6 +5,9 @@
 <link rel="import" href="../../../bower_components/paper-styles/typography.html">
 <link rel="import" href="../../../bower_components/paper-button/paper-button.html">
 <link rel="import" href="../../../bower_components/paper-input/paper-input.html">
+<link rel="import" href="../../../bower_components/paper-listbox/paper-listbox.html">
+<link rel="import" href="../../../bower_components/paper-item/paper-item.html">
+<link rel="import" href="../../../bower_components/paper-item/paper-item-body.html">
 <link rel="import" href="../../app-theme.html">
 
 <dom-module id="expr-splash-screen">
@@ -26,7 +29,6 @@
       .subtitle {
         @apply(--paper-font-subhead);
         margin-top: 12px;
-        margin-bottom: 12px;
       }
 
       .container-library-path {
@@ -41,12 +43,34 @@
       .button-browse {
         align-self: flex-end;
       }
+
+      .list-recent {
+        background: var(--dialog-color);
+        height: 232px;
+      }
     </style>
     <div class="title">exprsjo</div>
-    <div class="subtitle">Open your photo library</div>
+    <div class="hint">Open your photo library</div>
     <div class="container-library-path">
       <paper-input class="input-library-path" label="Library path"></paper-input>
       <paper-button class="button-browse" raised>browse</paper-button>
+    </div>
+    <div>
+      <div class="hint">Open recent libraries</div>
+      <paper-listbox class="list-recent">
+        <paper-item>
+          <paper-item-body two-line>
+            <div>/path/to/first/library</div>
+            <div secondary>Last used: 2016-10-17</div>
+          </paper-item-body>
+        </paper-item>
+        <paper-item>
+          <paper-item-body two-line>
+            <div>/path/to/second/library</div>
+            <div secondary>Last used: 2016-09-19</div>
+          </paper-item-body>
+        </paper-item>
+      </paper-listbox>
     </div>
   </template>
   <script src="expr-splash-screen.js"></script>
