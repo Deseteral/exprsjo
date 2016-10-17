@@ -17,28 +17,9 @@ describe('<expr-splash-screen>', () => {
     expect(title).to.eql('exprsjo');
   });
 
-  it('should render hints', () => {
-    const hints = [...exprApp.querySelectorAll('.subtitle')];
-    hints.map((hint) => hint.textContent);
-
-    const expectedHints = [
-      'Open your photo library',
-      'Open recent libraries'
-    ];
-
-    for (let i = 0; i < hints.length; i++) {
-      expect(hints[i]).to.eql(expectedHints[i]);
-    }
-  });
-
-  it('should render library path input inside container', () => {
-    const input = libraryPathContainer().querySelector('.input-library-path');
-    expect(input).to.be.ok;
-  });
-
-  it('should render "browse" button inside container', () => {
-    const button = libraryPathContainer().querySelector('.button-browse');
-    expect(button).to.be.ok;
+  it('should render hint', () => {
+    const hint = exprApp.querySelector('.hint').textContent;
+    expect(hint).to.eql('Open recent libraries');
   });
 
   it('should render recent library paths list', () => {
@@ -48,13 +29,9 @@ describe('<expr-splash-screen>', () => {
 
   it('should render operation buttons', () => {
     const exitButton = exprApp.querySelector('.button-exit').textContent;
-    const openButton = exprApp.querySelector('.button-open').textContent;
+    const openButton = exprApp.querySelector('.button-browse').textContent;
 
     expect(exitButton).to.eql('exit');
-    expect(openButton).to.eql('open');
+    expect(openButton).to.eql('browse');
   });
-
-  function libraryPathContainer() {
-    return exprApp.querySelector('.container-library-path');
-  }
 });

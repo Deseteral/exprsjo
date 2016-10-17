@@ -24,15 +24,12 @@
         @apply(--paper-font-display3);
         font-weight: 200;
         line-height: 70px;
+        margin-bottom: 35px;
       }
 
       .hint {
         @apply(--paper-font-subhead);
         margin-top: 12px;
-      }
-
-      .container-library-path {
-        display: flex;
       }
 
       .input-library-path {
@@ -46,7 +43,7 @@
 
       .list-recent {
         background: var(--dialog-color);
-        height: 232px;
+        height: 216px;
         margin-bottom: 10px;
       }
 
@@ -56,11 +53,6 @@
       }
     </style>
     <div class="title">exprsjo</div>
-    <div class="hint">Open your photo library</div>
-    <div class="container-library-path">
-      <paper-input class="input-library-path" label="Library path"></paper-input>
-      <paper-button class="button-browse" raised>browse</paper-button>
-    </div>
     <div class="hint">Open recent libraries</div>
     <paper-listbox class="list-recent">
       <paper-item>
@@ -75,10 +67,16 @@
           <div secondary>Last used: 2016-09-19</div>
         </paper-item-body>
       </paper-item>
+      <paper-item>
+        <paper-item-body two-line>
+          <div>/path/to/second/library</div>
+          <div secondary>Last used: 2016-09-19</div>
+        </paper-item-body>
+      </paper-item>
     </paper-listbox>
     <div class="buttons-operation">
       <paper-button class="button-exit" raised>exit</paper-button>
-      <paper-button class="button-open" raised>open</paper-button>
+      <paper-button class="button-browse" raised>browse</paper-button>
     </div>
   </template>
   <script src="expr-splash-screen.js"></script>
