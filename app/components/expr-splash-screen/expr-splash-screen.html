@@ -18,13 +18,15 @@
         display: inline-block;
         background: var(--background-color);
         color: var(--primary-text-color);
+        -webkit-user-select: none;
+        cursor: default;
       }
 
       .title {
         @apply(--paper-font-display3);
         font-weight: 200;
         line-height: 70px;
-        margin-bottom: 35px;
+        -webkit-app-region: drag;
       }
 
       .hint {
@@ -75,7 +77,7 @@
       </paper-item>
     </paper-listbox>
     <div class="buttons-operation">
-      <paper-button class="button-exit" raised>exit</paper-button>
+      <paper-button class="button-exit">exit</paper-button>
       <paper-button class="button-browse" raised>browse</paper-button>
     </div>
   </template>

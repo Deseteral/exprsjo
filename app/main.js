@@ -19,7 +19,7 @@ function startApp() {
 
 function createSplashWindow() {
   const width = 576;
-  const height = 432;
+  const height = 405;
 
   splashWindow = new BrowserWindow({
     width,
