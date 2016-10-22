@@ -25,8 +25,8 @@
   "homepage": "https://github.com/deseteral/exprsjo#readme",
   "devDependencies": {
     "babel-preset-es2015-node6": "0.3.0",
-    "electron": "1.4.3",
-    "eslint": "3.8.0",
+    "electron": "1.4.4",
+    "eslint": "3.8.1",
     "gulp": "3.9.1",
     "gulp-babel": "6.1.2",
     "gulp-sourcemaps": "2.1.1",
